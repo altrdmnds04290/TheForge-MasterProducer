@@ -1,0 +1,24 @@
+{
+  "apps": [
+    {
+      "name": "forge-api",
+      "script": "apps/forge-api/main.py",
+      "interpreter": "python3",
+      "cwd": "/workspaces/TheForge-MasterProducer"
+    },
+    {
+      "name": "forge-web",
+      "cwd": "apps/forge-web",
+      "script": "npm",
+      "args": "run dev"
+    },
+    {
+      "name": "repair-daemon",
+      "script": "scripts/daemons/self_repair.js"
+    },
+    {
+      "name": "backup-daemon",
+      "script": "scripts/daemons/self_backup.js"
+    }
+  ]
+}

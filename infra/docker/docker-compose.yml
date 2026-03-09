@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  api:
+    image: python:3.11
+    command: sh -c "python3 apps/forge-api/main.py || uvicorn apps.forge_api.main:app --host 0.0.0.0 --port 8000"
+    ports: ["8000:8000"]
+  web:
+    image: node:20
+    command: sh -c "cd apps/forge-web && npm run dev"
+    ports: ["3000:3000"]

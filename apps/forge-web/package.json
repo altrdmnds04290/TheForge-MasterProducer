@@ -1,0 +1,21 @@
+{
+  "name": "forge-web",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.2",
+    "axios": "latest",
+    "tailwindcss": "latest"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "@playwright/test": "^1.37.0"
+  }
+}

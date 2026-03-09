@@ -1,0 +1,22 @@
+{
+  "name": "PhoenixForge-MasterProducer",
+  "private": true,
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:web": "pnpm --filter forge-web dev",
+    "dev:api": "pnpm --filter forge-api dev",
+    "dev:mobile": "pnpm --filter forge-mobile start",
+    "dev:admin": "pnpm --filter forge-admin dev",
+    "build": "pnpm -r build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write .",
+    "wizard": "node scripts/wizard.js status"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "concurrently": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}

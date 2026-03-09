@@ -1,0 +1,13 @@
+[Unit]
+Description=PhoenixForge API (uvicorn)
+After=network.target
+
+[Service]
+User=${USER}
+WorkingDirectory=/workspaces/TheForge-MasterProducer
+ExecStart=/workspaces/TheForge-MasterProducer/.venv/bin/uvicorn apps.forge_api.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

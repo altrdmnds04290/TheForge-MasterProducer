@@ -1,0 +1,13 @@
+[Unit]
+Description=PhoenixForge Daemons
+After=network.target
+
+[Service]
+User=${USER}
+WorkingDirectory=/workspaces/TheForge-MasterProducer
+ExecStart=/usr/bin/node /workspaces/TheForge-MasterProducer/scripts/daemons/self_repair.js
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
